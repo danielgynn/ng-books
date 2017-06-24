@@ -2,7 +2,7 @@
   <h1>{{title}}</h1>
 </header>
 
-<div>
+<div *ngFor="let book of books">
   <h2>{{book.title}}</h2>
   <div>
     <label>Title: </label>
