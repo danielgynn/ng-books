@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.flex { display: flex; }
+.flex-dc { flex-direction: column; }
+.flex-33 { flex: 1 1 33%; }
+.flex-67 { flex: 1 1 67%; }
+
+.px1 { padding: 0 1rem; }
+
+.cursor { cursor: pointer; }

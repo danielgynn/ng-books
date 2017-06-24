@@ -2,12 +2,24 @@
   <h1>{{title}}</h1>
 </header>
 
-<div *ngFor="let book of books">
-  <h2>{{book.title}}</h2>
-  <div>
+<section class="flex">
+  <div *ngIf="selectedBook" class="flex-33">
     <label>Title: </label>
-    <input [(ngModel)]="book.title" placeholder="title">
+    <input [(ngModel)]="selectedBook.title" placeholder="title" />
+    <p>{{selectedBook.author}} - {{selectedBook.publishDate}}</p>
+    <small>{{selectedBook.blurb}}</small>
   </div>
-  <p>{{book.author}} - {{book.publishDate}}</p>
-  <small>{{book.blurb}}</small>
-</div>
+
+  <div *ngIf="selectedBook == null" class="flex-33">
+    <p>Please select a book to view.</p>
+  </div>
+
+  <div class="flex flex-dc flex-67">
+    <div *ngFor="let book of books"
+      class="px1 cursor"
+      [class.selected]="book === selectedBook"
+      (click)="onSelect(book)">
+      <h2>{{book.title}}</h2>
+    </div>
+  </div>
+</section>

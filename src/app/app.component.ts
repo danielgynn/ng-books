@@ -12,4 +12,9 @@ import Book from './models/book';
 export class AppComponent {
   title = 'Angular Books';
   books = BOOKS;
+  selectedBook: Book;
+
+  onSelect(book: Book): void {
+    (this.selectedBook === book) ? (this.selectedBook = null) : (this.selectedBook = book);
+  }
 }
