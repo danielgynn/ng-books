@@ -13,6 +13,7 @@ export class AppComponent {
   title = 'Angular Books';
   books = BOOKS;
   selectedBook: Book;
+  totalBooks = BOOKS.length;
 
   onSelect(book: Book): void {
     (this.selectedBook === book) ? (this.selectedBook = null) : (this.selectedBook = book);
