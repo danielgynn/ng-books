@@ -5,14 +5,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BookService } from './services/book.service';
+
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BooksComponent } from './components/books/books.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailComponent,
-    BooksComponent
+    BooksComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +24,15 @@ import { BooksComponent } from './components/books/books.component';
       {
         path: 'books',
         component: BooksComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
       }
     ])
   ],

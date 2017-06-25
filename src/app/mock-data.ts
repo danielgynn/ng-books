@@ -62,5 +62,21 @@ export const BOOKS: Book[] = [
       suspect ghostwriting project. He becomes so wrapped up with the work and its unusual
       author that, soon, his previously placid life begins to come unraveled.
     `
+  },
+  {
+    id: 5,
+    title: 'Sputnik Sweetheart',
+    author: 'Haruki Murakami',
+    cover: 'https://images.gr-assets.com/books/1403184551l/397165.jpg',
+    publishDate: 1999,
+    blurb: `
+      A college student, identified only as “K,” falls in love with his classmate, Sumire.
+      But devotion to an untidy writerly life precludes her from any personal commitments–until
+      she meets Miu, an older and much more sophisticated businesswoman. When Sumire disappears
+      from an island off the coast of Greece, “K” is solicited to join the search party and
+      finds himself drawn back into her world and beset by ominous, haunting visions. A
+      love story combined with a detective story, Sputnik Sweetheart ultimately lingers in
+      the mind as a profound meditation on human longing.
+    `
   }
 ];
