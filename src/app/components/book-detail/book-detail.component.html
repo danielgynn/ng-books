@@ -2,6 +2,9 @@
   <header class="my1">
     <label>Title: </label>
     <input [(ngModel)]="book.title" placeholder="title" />
+
+    <label>Author: </label>
+    <input [(ngModel)]="book.author" placeholder="author" />
   </header>
   <div class="flex">
     <div class="flex flex-ac flex-jc flex-33">
@@ -12,6 +15,8 @@
       <h2>{{book.title}}</h2>
       <p>{{book.author}} - {{book.publishDate}}</p>
       <small>{{book.blurb}}</small>
+
+      <button (click)="save()">Save</button>
     </div>
   </div>
 </div>

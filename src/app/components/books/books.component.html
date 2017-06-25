@@ -1,9 +1,9 @@
 <section class="flex">
   <div class="mx2 flex flex-ac flex-jc flex-dc flex-33">
-    <div *ngIf="selectedBook">
-      <img src="{{selectedBook.cover}}" />
-      <p>{{selectedBook.title}}</p>
-      <small>{{selectedBook.author}} - {{selectedBook.publishDate}}</small>
+    <div class="flex flex-ac flex-dc" *ngIf="selectedBook">
+      <img class="mb1" src="{{selectedBook.cover}}" />
+      <h4 class="m0">{{selectedBook.title}}</h4>
+      <p class="m0 mb1">{{selectedBook.author}} - {{selectedBook.publishDate}}</p>
       <button (click)="gotoDetail()">View More</button>
     </div>
 
