@@ -1,6 +1,16 @@
 <section class="flex">
-  <div class="flex-33 mx2">
-    <book-detail [book]="selectedBook"></book-detail>
+  <div class="mx2 flex flex-ac flex-jc flex-dc flex-33">
+    <div *ngIf="selectedBook">
+      <a [routerLink]="['/book', selectedBook.id]">
+        <img src="{{selectedBook.cover}}" />
+        <p>{{selectedBook.title}}</p>
+        <small>{{selectedBook.author}} - {{selectedBook.publishDate}}</small>
+      </a>
+    </div>
+
+    <div *ngIf="selectedBook == null">
+      <p>Please select a book to view.</p>
+    </div>
   </div>
 
   <div class="flex flex-dc flex-67">

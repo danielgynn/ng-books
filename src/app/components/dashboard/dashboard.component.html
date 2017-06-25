@@ -3,6 +3,6 @@
 
   <h3>Latest Books</h3>
   <div *ngFor="let book of books">
-    <h4>{{book.title}}</h4>
+    <h4><a [routerLink]="['/book', book.id]">{{book.title}}</a></h4>
   </div>
 </section>

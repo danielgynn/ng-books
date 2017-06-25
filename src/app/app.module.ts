@@ -30,6 +30,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
         component: DashboardComponent
       },
       {
+        path: 'book/:id',
+        component: BookDetailComponent
+      },
+      {
         path: '',
         redirectTo: '/dashboard',
         pathMatch: 'full'

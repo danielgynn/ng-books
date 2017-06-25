@@ -6,8 +6,5 @@
   <img src="{{book.cover}}" />
   <p>{{book.author}} - {{book.publishDate}}</p>
   <small>{{book.blurb}}</small>
-</div>
-
-<div *ngIf="book == null">
-  <p>Please select a book to view.</p>
+  <button (click)="goBack()">Back</button>
 </div>

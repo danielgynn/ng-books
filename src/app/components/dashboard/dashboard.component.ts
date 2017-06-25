@@ -4,7 +4,7 @@ import { Book } from '../../models/book';
 import { BookService } from '../../services/book.service';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
@@ -16,7 +16,13 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookService.getBooks()
-      .then(books => this.books = books.slice(Math.max(books.length - 3, 0)));
+      .then(books => {
+        this.books = books.slice(Math.max(books.length - 3, 0))
+        this.reverseBooks()
+      });
   }
 
+  reverseBooks(): void {
+    this.books.reverse();
+  }
 }
