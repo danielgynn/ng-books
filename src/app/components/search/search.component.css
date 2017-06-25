@@ -1,20 +1,15 @@
-.search-result{
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
-  border-right: 1px solid gray;
-  width:195px;
-  height: 16px;
-  padding: 5px;
+input[type=search] {
+  line-height: 60px;
+  font-size: 2rem;
+  display: block;
+  margin: 0 auto 2rem;
+  color: #333;
   background-color: white;
-  cursor: pointer;
-}
-
-.search-result:hover {
-  color: #eee;
-  background-color: #607D8B;
-}
-
-#search-box{
-  width: 200px;
-  height: 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+  -webkit-appearance: none;
 }

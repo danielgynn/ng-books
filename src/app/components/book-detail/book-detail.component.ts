@@ -14,6 +14,7 @@ import { BookService } from '../../services/book.service';
 
 export class BookDetailComponent implements OnInit {
   book: Book;
+  editingBook = false;
 
   constructor(
     private bookService: BookService,
@@ -30,10 +31,14 @@ export class BookDetailComponent implements OnInit {
 
   save(): void {
     this.bookService.update(this.book)
-      .then(() => this.goBack());
+      .then(() => this.editingBook = false);
   }
 
   goBack(): void {
     this.location.back();
+  }
+
+  editBook(): void {
+    this.editingBook = true;
   }
 }

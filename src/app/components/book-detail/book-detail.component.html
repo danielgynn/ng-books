@@ -1,22 +1,54 @@
 <div *ngIf="book">
-  <header class="my1">
-    <label>Title: </label>
-    <input [(ngModel)]="book.title" placeholder="title" />
-
-    <label>Author: </label>
-    <input [(ngModel)]="book.author" placeholder="author" />
-  </header>
-  <div class="flex">
-    <div class="flex flex-ac flex-jc flex-33">
+  <div *ngIf="editingBook === false" class="flex flex-dc-mob">
+    <div class="flex flex-ac flex-jc flex-33 flex-100-mob">
       <img src="{{book.cover}}" />
     </div>
-    <div class="flex-67">
-      <button (click)="goBack()">Back</button>
+    <div class="flex-67 flex-100-mob mr1">
+      <a class="button" (click)="goBack()">Back</a>
+      <a class="button" (click)="editBook()">Edit</a>
       <h2>{{book.title}}</h2>
       <p>{{book.author}} - {{book.publishDate}}</p>
       <small>{{book.blurb}}</small>
+    </div>
+  </div>
 
-      <button (click)="save()">Save</button>
+  <div *ngIf="editingBook">
+    <div class="mx1">
+      <label>Title: </label>
+      <input [(ngModel)]="book.title" placeholder="title" />
+    </div>
+
+    <div class="flex flex-dc-mob">
+      <div class="flex flex-dc flex-ac flex-jc flex-100-mob flex-33">
+        <label>Cover URL: </label>
+        <img class="mb1" src="{{book.cover}}" />
+        <div class="mx1 w75">
+          <textarea class="one-line" [(ngModel)]="book.cover" placeholder="cover url"></textarea>
+        </div>
+      </div>
+
+      <div class="flex-67 mr1 flex-100-mob">
+        <div class="flex flex-dc-mob mx1">
+          <div class="flex-67 flex-100-mob">
+            <label>Author: </label>
+            <input [(ngModel)]="book.author" placeholder="author" />
+          </div>
+
+          <div class="flex-33 flex-100-mob">
+            <label>Publish Year: </label>
+            <input [(ngModel)]="book.publishDate" placeholder="publish year" />
+          </div>
+        </div>
+
+        <div class="mx1">
+          <label>Blurb: </label>
+          <textarea [(ngModel)]="book.blurb" placeholder="blurb"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-jc my1">
+      <a class="button" (click)="save()">Save</a>
     </div>
   </div>
 </div>

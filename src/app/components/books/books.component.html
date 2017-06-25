@@ -4,9 +4,11 @@
       <img class="mb1" src="{{selectedBook.cover}}" />
       <h4 class="m0">{{selectedBook.title}}</h4>
       <p class="m0 mb1">{{selectedBook.author}} - {{selectedBook.publishDate}}</p>
-      <button (click)="gotoDetail()">View More</button>
-      <button class="delete"
-        (click)="delete(selectedBook); $event.stopPropagation()">Delete</button>
+      <div>
+        <a class="button" (click)="gotoDetail()">View More</a>
+        <a class="button"
+          (click)="delete(selectedBook); $event.stopPropagation()">Delete</a>
+      </div>
     </div>
 
     <div *ngIf="selectedBook == null">
@@ -15,15 +17,14 @@
   </div>
 
   <div class="flex flex-dc flex-67">
-    <search></search>
     <p>Total books: {{totalBooks}}</p>
-    <div>
+    <!-- <div>
       <label>Book title:</label> <input #bookTitle />
-      <button (click)="add(bookTitle.value); bookTitle.value=''">Add</button>
-    </div>
-    <div class="scroll">
+      <a class="button" (click)="add(bookTitle.value); bookTitle.value=''">Add</a>
+    </div> -->
+    <div class="scroll my1">
       <div *ngFor="let book of books"
-        class="p1 cursor"
+        class="hover p1 cursor"
         [class.selected]="book === selectedBook"
         (click)="onSelect(book)">
         <h2 class="m0">{{book.title}}</h2>

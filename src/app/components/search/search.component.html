@@ -1,8 +1,15 @@
 <div id="search-component">
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
-  <div>
-    <ul *ngFor="let book of books | async" (click)="gotoDetail(book)" class="search-result" >
-      <li>{{book.title}}</li>
-    </ul>
+  <input type="search" placeholder="Search for a book..." #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+</div>
+
+<p>{{error}}</p>
+
+<div class="scroll">
+  <div *ngFor="let book of books | async"
+    class="p1 cursor hover"
+    [class.selected]="book === selectedBook"
+    (click)="gotoDetail(book)">
+    <h2 class="m0">{{book.title}}</h2>
+    <small>{{book.author}}</small>
   </div>
 </div>

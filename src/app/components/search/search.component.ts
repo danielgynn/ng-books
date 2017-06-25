@@ -21,13 +21,13 @@ import { BookSearchService } from '../../services/book-search.service';
 
 export class SearchComponent implements OnInit {
   books: Observable<Book[]>;
+  error = '';
    private searchTerms = new Subject<string>();
 
    constructor(
      private bookSearchService: BookSearchService,
      private router: Router) {}
 
-   // Push a search term into the observable stream.
    search(term: string): void {
      this.searchTerms.next(term);
    }
@@ -38,12 +38,13 @@ export class SearchComponent implements OnInit {
        .distinctUntilChanged()
        .switchMap(term => term
          ? this.bookSearchService.search(term)
-         : Observable.of<Book[]>([]))
+         : Observable.of<Book[]>([])
+       )
        .catch(error => {
          console.log(error);
          return Observable.of<Book[]>([]);
        });
-   }
+     }
 
    gotoDetail(book: Book): void {
      let link = ['/book', book.id];
