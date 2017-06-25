@@ -4,6 +4,7 @@ import { FormsModule }   from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { BookService } from './services/book.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { BookDetailComponent } from './components/book-detail/book-detail.compon
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 

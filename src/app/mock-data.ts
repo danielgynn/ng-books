@@ -1,6 +1,6 @@
-import Book from './models/book';
+import { Book } from './models/book';
 
-const BOOKS: Book[] = [
+export const BOOKS: Book[] = [
   {
     id: 1,
     title: 'Norwegian Wood',
@@ -64,5 +64,3 @@ const BOOKS: Book[] = [
     `
   }
 ];
-
-export default BOOKS;
