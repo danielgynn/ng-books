@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     this.bookService.getBooks()
       .then(books => {
-        this.books = books.slice(Math.max(books.length - 3, 0))
+        this.books = books.slice(Math.max(books.length - 4, 0))
         this.reverseBooks()
       });
   }

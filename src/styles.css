@@ -11,6 +11,7 @@ body {
 .flex-ac { align-items: center; }
 .flex-jc { justify-content: center; }
 .flex-jsb { justify-content: space-between; }
+.flex-25 { flex: 1 1 25%; }
 .flex-33 { flex: 1 1 33%; }
 .flex-67 { flex: 1 1 67%; }
 
@@ -23,5 +24,7 @@ body {
 
 .m0 { margin: 0; }
 .m1 { margin: 1rem; }
+
+.mb1 { margin-bottom: 1rem; }
 
 .cursor { cursor: pointer; }

@@ -14,12 +14,14 @@
 
   <div class="flex flex-dc flex-67">
     <p>Total books: {{totalBooks}}</p>
-    <div *ngFor="let book of books"
-      class="p1 cursor"
-      [class.selected]="book === selectedBook"
-      (click)="onSelect(book)">
-      <h2 class="m0">{{book.title}}</h2>
-      <small>{{book.author}}</small>
+    <div class="scroll">
+      <div *ngFor="let book of books"
+        class="p1 cursor"
+        [class.selected]="book === selectedBook"
+        (click)="onSelect(book)">
+        <h2 class="m0">{{book.title}}</h2>
+        <small>{{book.author}}</small>
+      </div>
     </div>
   </div>
 </section>

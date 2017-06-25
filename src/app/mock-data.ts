@@ -78,5 +78,47 @@ export const BOOKS: Book[] = [
       love story combined with a detective story, Sputnik Sweetheart ultimately lingers in
       the mind as a profound meditation on human longing.
     `
+  },
+  {
+    id: 6,
+    title: 'The Fellowship of the Ring',
+    author: 'J.R.R. Tolkien',
+    cover: 'https://images.gr-assets.com/books/1307111070l/727798.jpg',
+    publishDate: 1954,
+    blurb: `
+      In a sleepy village in the Shire, a young hobbit is entrusted with an immense task.
+      He must make a perilous journey across Middle-earth to the Cracks of Doom, there
+      to destroy the Ruling Ring of Power - the only thing that prevents the Dark
+      Lord's evil dominion.
+    `
+  },
+  {
+    id: 7,
+    title: 'A Tale for the Time Being',
+    author: 'Ruth Ozeki',
+    cover: 'https://images.gr-assets.com/books/1463767452l/15811545.jpg',
+    publishDate: 2013,
+    blurb: `
+      In Tokyo, sixteen-year-old Nao has decided there’s only one escape from her aching
+      loneliness and her classmates’ bullying, but before she ends it all, Nao plans to
+      document the life of her great-grandmother, a Buddhist nun who’s lived more than a
+      century. A diary is Nao’s only solace—and will touch lives in a ways she can
+      scarcely imagine.
+    `
+  },
+  {
+    id: 8,
+    title: 'If on a Winter\'s Night a Traveler',
+    author: 'Italo Calvino',
+    cover: 'https://images.gr-assets.com/books/1355316130l/374233.jpg',
+    publishDate: 1979,
+    blurb: `
+      If on a Winter's Night a Traveler is a marvel of ingenuity, an experimental
+      text that looks longingly back to the great age of narration--"when time no
+      longer seemed stopped and did not yet seem to have exploded." Italo Calvino's
+      novel is in one sense a comedy in which the two protagonists, the Reader and
+      the Other Reader, ultimately end up married, having almost finished If on a
+      Winter's Night a Traveler.
+    `
   }
 ];
