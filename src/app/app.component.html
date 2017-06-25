@@ -2,19 +2,4 @@
   <h1>{{title}}</h1>
 </header>
 
-<section class="flex">
-  <div class="flex-33 mx2">
-    <book-detail [book]="selectedBook"></book-detail>
-  </div>
-
-  <div class="flex flex-dc flex-67">
-    <p>Total books: {{totalBooks}}</p>
-    <div *ngFor="let book of books"
-      class="p1 cursor"
-      [class.selected]="book === selectedBook"
-      (click)="onSelect(book)">
-      <h2 class="m0">{{book.title}}</h2>
-      <small>{{book.author}}</small>
-    </div>
-  </div>
-</section>
+<books></books>

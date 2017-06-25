@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms'
 
 import { AppComponent } from './app.component';
-import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BookService } from './services/book.service';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { BooksComponent } from './components/books/books.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookDetailComponent
+    BookDetailComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
