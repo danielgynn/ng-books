@@ -1,0 +1,10 @@
+<div *ngIf="book">
+  <label>Title: </label>
+  <input [(ngModel)]="book.title" placeholder="title" />
+  <p>{{book.author}} - {{book.publishDate}}</p>
+  <small>{{book.blurb}}</small>
+</div>
+
+<div *ngIf="selectedBook == null">
+  <p>Please select a book to view.</p>
+</div>

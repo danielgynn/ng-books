@@ -4,16 +4,7 @@
 
 <section class="flex">
   <div class="flex-33 mx2">
-    <div *ngIf="selectedBook">
-      <label>Title: </label>
-      <input [(ngModel)]="selectedBook.title" placeholder="title" />
-      <p>{{selectedBook.author}} - {{selectedBook.publishDate}}</p>
-      <small>{{selectedBook.blurb}}</small>
-    </div>
-
-    <div *ngIf="selectedBook == null">
-      <p>Please select a book to view.</p>
-    </div>
+    <book-detail [book]="selectedBook"></book-detail>
   </div>
 
   <div class="flex flex-dc flex-67">
