@@ -8,6 +8,8 @@ body {
 
 .flex { display: flex; }
 .flex-dc { flex-direction: column; }
+.flex-ac { align-items: center; }
+.flex-jsb { justify-content: space-between; }
 .flex-33 { flex: 1 1 33%; }
 .flex-67 { flex: 1 1 67%; }
 

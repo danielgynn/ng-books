@@ -1,5 +1,9 @@
-<header class="mx2">
+<header class="mx2 flex flex-ac flex-jsb">
   <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/books">Books</a>
+  </nav>
 </header>
 
-<books></books>
+<router-outlet></router-outlet>
