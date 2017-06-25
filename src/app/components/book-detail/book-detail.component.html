@@ -1,5 +1,5 @@
 <div *ngIf="book" class="mt4">
-  <div *ngIf="editingBook === false" class="flex flex-dc-mob">
+  <div *ngIf="editingBook === false" class="flex flex-dcr-mob">
     <div class="flex-67 flex-100-mob mr1">
       <h2 class="m0">{{book.title}}</h2>
       <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
@@ -14,7 +14,7 @@
       <a class="button" (click)="editBook()">Edit</a>
     </div>
     <div class="flex flex-ac flex-jc flex-33 flex-100-mob">
-      <img class="cover" src="{{book.cover}}" />
+      <img class="cover mb2" src="{{book.cover}}" />
     </div>
   </div>
 

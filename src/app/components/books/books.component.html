@@ -19,6 +19,7 @@
   <div class="flex flex-dc flex-67 flex-100-mob">
     <div class="flex flex-ac">
       <p class="mr1">Total books: {{totalBooks}}</p>
+      <a class="mr1" (click)="getBooks()">View All</a>
       <a class="mr1" (click)="sortByRead()">View Read</a>
       <a (click)="sortByUnread()">View Unread</a>
     </div>

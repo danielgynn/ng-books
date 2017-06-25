@@ -19,6 +19,20 @@ export class BookService {
      .catch(this.handleError);
   }
 
+  sortByRead(): Promise<Book[]> {
+    return this.http.get(this.booksUrl)
+     .toPromise()
+     .then(response => response.json().data.filter((book) => book.read) as Book[])
+     .catch(this.handleError);
+  }
+
+  sortByUnread(): Promise<Book[]> {
+    return this.http.get(this.booksUrl)
+     .toPromise()
+     .then(response => response.json().data.filter((book) => !book.read) as Book[])
+     .catch(this.handleError);
+  }
+
   getBook(id: number): Promise<Book> {
     const url = `${this.booksUrl}/${id}`;
     return this.http.get(url)

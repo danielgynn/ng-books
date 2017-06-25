@@ -37,14 +37,16 @@ export class BooksComponent implements OnInit {
   }
 
   sortByRead(): void {
-    this.bookService.getBooks().then(books => {
-      this.books = books.filter((book) => book.read)
+    this.bookService.sortByRead().then(books => {
+      this.books = books
+      this.totalBooks = books.length
     });
   }
 
   sortByUnread(): void {
-    this.bookService.getBooks().then(books => {
-      this.books = books.filter((book) => !book.read)
+    this.bookService.sortByUnread().then(books => {
+      this.books = books
+      this.totalBooks = books.length
     });
   }
 

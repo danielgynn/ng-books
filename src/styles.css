@@ -45,6 +45,7 @@ a:hover {
 .flex-dc { flex-direction: column; }
 .flex-ac { align-items: center; }
 .flex-jc { justify-content: center; }
+.flex-wrap { flex-wrap: wrap; }
 .flex-jsb { justify-content: space-between; }
 .flex-25 { flex: 1 1 25%; }
 .flex-33 {
@@ -65,6 +66,10 @@ a:hover {
   .flex-dc-mob {
     flex-direction: column;
   }
+
+  .flex-dcr-mob {
+    flex-direction: column-reverse;
+  }
 }
 
 .px1 { padding: 0 1rem; }
@@ -82,6 +87,7 @@ a:hover {
 .mt4 { margin-top: 4rem; }
 
 .mb1 { margin-bottom: 1rem; }
+.mb2 { margin-bottom: 2rem; }
 .mr1 { margin-right: 1rem; }
 
 .w75 { width: 75%; }
