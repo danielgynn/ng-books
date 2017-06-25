@@ -49,4 +49,13 @@ export class BooksComponent implements OnInit {
         this.selectedBook = null;
       });
   }
+
+  delete(book: Book): void {
+    this.bookService
+      .delete(book.id)
+      .then(() => {
+        this.books = this.books.filter(b => b !== book);
+        if (this.selectedBook === book) { this.selectedBook = null; }
+      });
+  }
 }

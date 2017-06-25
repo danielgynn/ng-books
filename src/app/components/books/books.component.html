@@ -5,6 +5,8 @@
       <h4 class="m0">{{selectedBook.title}}</h4>
       <p class="m0 mb1">{{selectedBook.author}} - {{selectedBook.publishDate}}</p>
       <button (click)="gotoDetail()">View More</button>
+      <button class="delete"
+        (click)="delete(selectedBook); $event.stopPropagation()">Delete</button>
     </div>
 
     <div *ngIf="selectedBook == null">
