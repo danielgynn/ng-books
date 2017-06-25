@@ -5,9 +5,12 @@
       <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
       <div class="my1">
         <small>{{book.blurb}}</small>
+        <p *ngIf="book.read === true">Read</p>
       </div>
 
       <a class="button" (click)="goBack()">Back</a>
+      <a *ngIf="book.read === false" class="button" (click)="markAsRead()">Mark as Read</a>
+      <a *ngIf="book.read === true" class="button" (click)="markAsRead()">Remove from Read</a>
       <a class="button" (click)="editBook()">Edit</a>
     </div>
     <div class="flex flex-ac flex-jc flex-33 flex-100-mob">

@@ -34,6 +34,11 @@ export class BookDetailComponent implements OnInit {
       .then(() => this.editingBook = false);
   }
 
+  markAsRead(): void {
+    (this.book.read === true) ? this.book.read = false : this.book.read = true;
+    this.bookService.update(this.book);
+  }
+
   goBack(): void {
     this.location.back();
   }

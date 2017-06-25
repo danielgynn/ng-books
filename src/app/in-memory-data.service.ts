@@ -9,6 +9,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Haruki Murakami',
         cover: 'https://images.gr-assets.com/books/1386924361l/11297.jpg',
         publishDate: 1987,
+        read: false,
         blurb: `Toru, a quiet and preternaturally serious young college student in Tokyo, is devoted to Naoko, a beautiful and introspective young woman, but their mutual passion is marked by the tragic death of their best friend years before. Toru begins to adapt to campus life and the loneliness and isolation he faces there, but Naoko finds the pressures and responsibilities of life unbearable. As she retreats further into her own world, Toru finds himself reaching out to others and drawn to a fiercely independent and sexually liberated young woman.`
       },
       {
@@ -17,6 +18,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Haruki Murakami',
         cover: 'https://images.gr-assets.com/books/1429638085l/4929.jpg',
         publishDate: 2002,
+        read: true,
         blurb: `
           Kafka on the Shore is powered by two remarkable characters: a teenage boy,
           Kafka Tamura, who runs away from home either to escape a gruesome oedipal
@@ -32,6 +34,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Haruki Murakami',
         cover: 'https://images.gr-assets.com/books/1322148274l/284066.jpg',
         publishDate: 1994,
+        read: false,
         blurb: `
           In a Tokyo suburb a young man named Toru Okada searches for his wife's missing
           cat. Soon he finds himself looking for his wife as well in a netherworld that
@@ -48,6 +51,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Haruki Murakami',
         cover: 'https://images.gr-assets.com/books/1483103331l/10357575.jpg',
         publishDate: 2009,
+        read: false,
         blurb: `
           A young woman named Aomame follows a taxi driver’s enigmatic suggestion and
           begins to notice puzzling discrepancies in the world around her. She has entered,
@@ -63,6 +67,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Haruki Murakami',
         cover: 'https://images.gr-assets.com/books/1403184551l/397165.jpg',
         publishDate: 1999,
+        read: false,
         blurb: `
           A college student, identified only as “K,” falls in love with his classmate, Sumire.
           But devotion to an untidy writerly life precludes her from any personal commitments–until
@@ -79,6 +84,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'J.R.R. Tolkien',
         cover: 'https://images.gr-assets.com/books/1307111070l/727798.jpg',
         publishDate: 1954,
+        read: false,
         blurb: `
           In a sleepy village in the Shire, a young hobbit is entrusted with an immense task.
           He must make a perilous journey across Middle-earth to the Cracks of Doom, there
@@ -92,6 +98,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Ruth Ozeki',
         cover: 'https://images.gr-assets.com/books/1463767452l/15811545.jpg',
         publishDate: 2013,
+        read: false,
         blurb: `
           In Tokyo, sixteen-year-old Nao has decided there’s only one escape from her aching
           loneliness and her classmates’ bullying, but before she ends it all, Nao plans to
@@ -106,6 +113,7 @@ export class InMemoryDataService implements InMemoryDbService {
         author: 'Italo Calvino',
         cover: 'https://images.gr-assets.com/books/1355316130l/374233.jpg',
         publishDate: 1979,
+        read: false,
         blurb: `
           If on a Winter's Night a Traveler is a marvel of ingenuity, an experimental
           text that looks longingly back to the great age of narration--"when time no

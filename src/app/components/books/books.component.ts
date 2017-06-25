@@ -36,6 +36,18 @@ export class BooksComponent implements OnInit {
     });
   }
 
+  sortByRead(): void {
+    this.bookService.getBooks().then(books => {
+      this.books = books.filter((book) => book.read)
+    });
+  }
+
+  sortByUnread(): void {
+    this.bookService.getBooks().then(books => {
+      this.books = books.filter((book) => !book.read)
+    });
+  }
+
   gotoDetail(): void {
     this.router.navigate(['/book', this.selectedBook.id]);
   }

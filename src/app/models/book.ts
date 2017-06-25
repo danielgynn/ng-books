@@ -5,4 +5,5 @@ export class Book {
   cover?: string;
   publishDate?: number;
   blurb?: string;
+  read: boolean;
 }

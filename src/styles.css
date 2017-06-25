@@ -31,7 +31,15 @@ nav a {
   font-style: italic;
 }
 
-a { color: white; }
+a {
+  color: white;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+a:hover {
+  color: #ccc;
+}
 
 .flex { display: flex; }
 .flex-dc { flex-direction: column; }

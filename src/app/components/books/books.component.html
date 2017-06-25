@@ -17,7 +17,11 @@
   </div>
 
   <div class="flex flex-dc flex-67 flex-100-mob">
-    <p>Total books: {{totalBooks}}</p>
+    <div class="flex flex-ac">
+      <p class="mr1">Total books: {{totalBooks}}</p>
+      <a class="mr1" (click)="sortByRead()">View Read</a>
+      <a (click)="sortByUnread()">View Unread</a>
+    </div>
     <!-- <div>
       <label>Book title:</label> <input #bookTitle />
       <a class="button" (click)="add(bookTitle.value); bookTitle.value=''">Add</a>
@@ -28,7 +32,7 @@
         [class.selected]="book === selectedBook"
         (click)="onSelect(book)">
         <h2 class="m0">{{book.title}}</h2>
-        <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
+        <h3 class="m0">{{book.author}}, {{book.publishDate}} <span *ngIf="book.read === true"> - Read</span></h3>
       </div>
     </div>
   </div>
