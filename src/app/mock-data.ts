@@ -47,6 +47,21 @@ const BOOKS: Book[] = [
       and an aging war veteran who has been permanently changed by the hideous things
       he witnessed during Japan's forgotten campaign in Manchuria.
     `
+  },
+  {
+    id: 4,
+    title: '1Q84',
+    author: 'Haruki Murakami',
+    cover: 'https://images.gr-assets.com/books/1483103331l/10357575.jpg',
+    publishDate: 2009,
+    blurb: `
+      A young woman named Aomame follows a taxi driver’s enigmatic suggestion and
+      begins to notice puzzling discrepancies in the world around her. She has entered,
+      she realizes, a parallel existence, which she calls 1Q84 —“Q is for ‘question mark.’
+      A world that bears a question.” Meanwhile, an aspiring writer named Tengo takes on a
+      suspect ghostwriting project. He becomes so wrapped up with the work and its unusual
+      author that, soon, his previously placid life begins to come unraveled.
+    `
   }
 ];
 
