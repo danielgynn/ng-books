@@ -14,6 +14,10 @@
 
   <div class="flex flex-dc flex-67">
     <p>Total books: {{totalBooks}}</p>
+    <div>
+      <label>Book title:</label> <input #bookTitle />
+      <button (click)="add(bookTitle.value); bookTitle.value=''">Add</button>
+    </div>
     <div class="scroll">
       <div *ngFor="let book of books"
         class="p1 cursor"

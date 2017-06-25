@@ -38,6 +38,14 @@ export class BookService {
       .catch(this.handleError);
   }
 
+  create(title: string): Promise<Book> {
+    return this.http
+      .post(this.booksUrl, JSON.stringify({title: title}), {headers: this.headers})
+      .toPromise()
+      .then(res => res.json().data as Book)
+      .catch(this.handleError);
+  }
+
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);

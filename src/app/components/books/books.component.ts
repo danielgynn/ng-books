@@ -39,4 +39,14 @@ export class BooksComponent implements OnInit {
   gotoDetail(): void {
     this.router.navigate(['/book', this.selectedBook.id]);
   }
+
+  add(title: string): void {
+    title = title.trim();
+    if (!title) { return; }
+    this.bookService.create(title)
+      .then(book => {
+        this.books.push(book);
+        this.selectedBook = null;
+      });
+  }
 }
