@@ -15,13 +15,15 @@ import { BookService } from './services/book.service';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BooksComponent } from './components/books/books.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookDetailComponent,
     BooksComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
