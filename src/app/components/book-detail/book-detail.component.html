@@ -1,14 +1,17 @@
-<div *ngIf="book">
+<div *ngIf="book" class="mt4">
   <div *ngIf="editingBook === false" class="flex flex-dc-mob">
-    <div class="flex flex-ac flex-jc flex-33 flex-100-mob">
-      <img src="{{book.cover}}" />
-    </div>
     <div class="flex-67 flex-100-mob mr1">
+      <h2 class="m0">{{book.title}}</h2>
+      <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
+      <div class="my1">
+        <small>{{book.blurb}}</small>
+      </div>
+
       <a class="button" (click)="goBack()">Back</a>
       <a class="button" (click)="editBook()">Edit</a>
-      <h2>{{book.title}}</h2>
-      <p>{{book.author}} - {{book.publishDate}}</p>
-      <small>{{book.blurb}}</small>
+    </div>
+    <div class="flex flex-ac flex-jc flex-33 flex-100-mob">
+      <img class="cover" src="{{book.cover}}" />
     </div>
   </div>
 
@@ -44,11 +47,12 @@
           <label>Blurb: </label>
           <textarea [(ngModel)]="book.blurb" placeholder="blurb"></textarea>
         </div>
+        <div class="flex flex-jc my1">
+          <a class="button w100" (click)="save()">Save</a>
+        </div>
       </div>
     </div>
 
-    <div class="flex flex-jc my1">
-      <a class="button" (click)="save()">Save</a>
-    </div>
+
   </div>
 </div>

@@ -22,7 +22,7 @@ import { BookSearchService } from '../../services/book-search.service';
 export class SearchComponent implements OnInit {
   books: Observable<Book[]>;
   error = '';
-   private searchTerms = new Subject<string>();
+  private searchTerms = new Subject<string>();
 
    constructor(
      private bookSearchService: BookSearchService,

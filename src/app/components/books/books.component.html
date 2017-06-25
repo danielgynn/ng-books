@@ -1,5 +1,5 @@
-<section class="flex">
-  <div class="mx2 flex flex-ac flex-jc flex-dc flex-33">
+<section class="flex flex-dc-mob">
+  <div class="mx2 flex flex-ac flex-jc flex-dc flex-33 flex-100-mob">
     <div class="flex flex-ac flex-dc" *ngIf="selectedBook">
       <img class="mb1" src="{{selectedBook.cover}}" />
       <h4 class="m0">{{selectedBook.title}}</h4>
@@ -16,19 +16,19 @@
     </div>
   </div>
 
-  <div class="flex flex-dc flex-67">
+  <div class="flex flex-dc flex-67 flex-100-mob">
     <p>Total books: {{totalBooks}}</p>
     <!-- <div>
       <label>Book title:</label> <input #bookTitle />
       <a class="button" (click)="add(bookTitle.value); bookTitle.value=''">Add</a>
     </div> -->
-    <div class="scroll my1">
+    <div class="scroll my1 mr1">
       <div *ngFor="let book of books"
         class="hover p1 cursor"
         [class.selected]="book === selectedBook"
         (click)="onSelect(book)">
         <h2 class="m0">{{book.title}}</h2>
-        <small>{{book.author}}</small>
+        <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
       </div>
     </div>
   </div>

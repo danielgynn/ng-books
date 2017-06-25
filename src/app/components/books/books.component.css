@@ -1,6 +1,6 @@
 .selected {
-  background-color: #333;
-  color: white;
+  background-color: white;
+  color: #333745;
 }
 
 img {
@@ -9,6 +9,6 @@ img {
 }
 
 .scroll {
-  max-height: 400px;
+  max-height: 70vh;
   overflow-y: scroll;
 }
