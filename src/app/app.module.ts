@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { AppRoutingModule }     from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { BookService } from './services/book.service';
 
@@ -20,25 +22,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-      {
-        path: 'books',
-        component: BooksComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'book/:id',
-        component: BookDetailComponent
-      },
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

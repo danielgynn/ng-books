@@ -1,10 +1,17 @@
 <div *ngIf="book">
-  <div class="my1">
+  <header class="my1">
     <label>Title: </label>
     <input [(ngModel)]="book.title" placeholder="title" />
+  </header>
+  <div class="flex">
+    <div class="flex flex-ac flex-jc flex-33">
+      <img src="{{book.cover}}" />
+    </div>
+    <div class="flex-67">
+      <button (click)="goBack()">Back</button>
+      <h2>{{book.title}}</h2>
+      <p>{{book.author}} - {{book.publishDate}}</p>
+      <small>{{book.blurb}}</small>
+    </div>
   </div>
-  <img src="{{book.cover}}" />
-  <p>{{book.author}} - {{book.publishDate}}</p>
-  <small>{{book.blurb}}</small>
-  <button (click)="goBack()">Back</button>
 </div>
