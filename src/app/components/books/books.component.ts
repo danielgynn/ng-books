@@ -19,14 +19,29 @@ export class BooksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBooks();
+    this.selectOptions = [
+      {value: '0', label: 'A-Z'},
+      {value: '1', label: 'Z-A'}
+    ];
   }
 
+  selectOptions: Array<any>;
   books: Book[];
+  bookOrder: String;
+  bookFilter: String;
   selectedBook: Book;
   totalBooks = 0;
 
   onSelect(book: Book): void {
     (this.selectedBook === book) ? (this.selectedBook = null) : (this.selectedBook = book);
+  }
+
+  selectOrder(order: String): void {
+    this.bookOrder = order;
+    this.bookService.sortBooks(this.bookOrder).then(books => {
+      this.books = books
+      this.totalBooks = books.length
+    });
   }
 
   getBooks(): void {
@@ -37,14 +52,16 @@ export class BooksComponent implements OnInit {
   }
 
   sortByRead(): void {
-    this.bookService.sortByRead().then(books => {
+    this.bookFilter = 'read';
+    this.bookService.getFilteredBooks(this.bookFilter).then(books => {
       this.books = books
       this.totalBooks = books.length
     });
   }
 
   sortByUnread(): void {
-    this.bookService.sortByUnread().then(books => {
+    this.bookFilter = 'unread';
+    this.bookService.getFilteredBooks(this.bookFilter).then(books => {
       this.books = books
       this.totalBooks = books.length
     });

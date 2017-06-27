@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { SelectModule } from 'ng-select';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -29,6 +30,7 @@ import { SearchComponent } from './components/search/search.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    SelectModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule
   ],

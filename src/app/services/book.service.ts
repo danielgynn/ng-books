@@ -19,17 +19,27 @@ export class BookService {
      .catch(this.handleError);
   }
 
-  sortByRead(): Promise<Book[]> {
+  sortBooks(order: String): Promise<Book[]> {
     return this.http.get(this.booksUrl)
-     .toPromise()
-     .then(response => response.json().data.filter((book) => book.read) as Book[])
-     .catch(this.handleError);
+      .toPromise()
+      .then(response => response.json().data.sort((a, b) => {
+        var x=a.title.toLowerCase(),
+          y=b.title.toLowerCase();
+        if (order === 'A-Z') {
+          return (x < y) ? (-1) : ((x > y) ? (1) : (0))
+        } else if (order === 'Z-A') {
+          return (x < y) ? (1) : ((x > y) ? (-1) : (0))
+        }
+      }) as Book[])
+      .catch(this.handleError);
   }
 
-  sortByUnread(): Promise<Book[]> {
+  getFilteredBooks(filter: String): Promise<Book[]> {
     return this.http.get(this.booksUrl)
      .toPromise()
-     .then(response => response.json().data.filter((book) => !book.read) as Book[])
+     .then(response => response.json().data.filter((book) => {
+       return (filter === 'read') ? (book.read) : ((filter === 'unread') ? (!book.read) : (null))
+     }) as Book[])
      .catch(this.handleError);
   }
 
