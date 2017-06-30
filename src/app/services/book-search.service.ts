@@ -18,9 +18,10 @@ export class BookSearchService {
      .catch(err => console.log(err));
   }
 
-  search(term: string): Observable<Book[]> {
+  search(term: string, searchByFilter: string): Observable<Book[]> {
+    console.log(searchByFilter);
     return this.http
-     .get(`api/books/?title=${term}`)
-     .map(response => response.json().data as Book[]);
+      .get(`api/books/?${searchByFilter}=${term}`)
+      .map(response => response.json().data as Book[]);
   }
 }

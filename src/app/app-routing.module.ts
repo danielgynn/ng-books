@@ -4,11 +4,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookDetailComponent } from './components/book-detail/book-detail.component';
 import { BooksComponent } from './components/books/books.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'books', component: BooksComponent },
+  { path: 'search', component: SearchComponent },
   { path: 'book/:id', component: BookDetailComponent }
 ];
 

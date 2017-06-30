@@ -22,6 +22,7 @@ import { BookSearchService } from '../../services/book-search.service';
 export class SearchComponent implements OnInit {
   books: Observable<Book[]>;
   error = '';
+  searchByFilter: string = 'title';
   private searchTerms = new Subject<string>();
 
    constructor(
@@ -32,12 +33,17 @@ export class SearchComponent implements OnInit {
      this.searchTerms.next(term);
    }
 
+   searchBy(filter: string): void {
+     this.searchByFilter = filter;
+     this.searchTerms.next('');
+   }
+
    ngOnInit(): void {
      this.books = this.searchTerms
        .debounceTime(300)
        .distinctUntilChanged()
        .switchMap(term => term
-         ? this.bookSearchService.search(term)
+         ? this.bookSearchService.search(term, this.searchByFilter)
          : Observable.of<Book[]>([])
        )
        .catch(error => {
