@@ -62,6 +62,7 @@ a:hover {
 .flex { display: flex; }
 .flex-dc { flex-direction: column; }
 .flex-ac { align-items: center; }
+.flex-afs { align-items: flex-start; }
 .flex-jc { justify-content: center; }
 .flex-wrap { flex-wrap: wrap; }
 .flex-jsb { justify-content: space-between; }
@@ -120,6 +121,16 @@ a:hover {
 
 .hover:hover {
   background-color: #777;
+}
+
+.logo {
+  width: 100px;
+  content: url("http://i.imgur.com/6CctSYq.png");
+  transition: all .4s ease-in-out;
+}
+
+.logo:hover {
+  content: url("http://i.imgur.com/Cy9UgTm.png");
 }
 
 input {
@@ -226,6 +237,15 @@ textarea {
 
 .book-tile:hover:after {
   opacity: 1;
+}
+
+ng-select input {
+  margin-bottom: 0;
+  line-height: initial;
+}
+
+ng-select .options {
+  color: #121212;
 }
 
 @media (max-width: 1200px) {

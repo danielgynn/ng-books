@@ -1,11 +1,15 @@
 <div *ngIf="book" class="mt4">
   <div *ngIf="editingBook === false" class="flex flex-dcr-mob">
     <div class="flex-67 flex-100-mob mr1">
-      <h2 class="m0">{{book.title}}</h2>
-      <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
+      <div class="flex flex-jsb flex-afs">
+        <div class="flex flex-dc">
+          <h2 class="m0">{{book.title}}</h2>
+          <h3 class="m0">{{book.author}}, {{book.publishDate}}</h3>
+        </div>
+        <p class="m0 mono" *ngIf="book.read === true">Read</p>
+      </div>
       <div class="my1">
         <small>{{book.blurb}}</small>
-        <p *ngIf="book.read === true">Read</p>
       </div>
 
       <a class="button" (click)="goBack()">Back</a>
